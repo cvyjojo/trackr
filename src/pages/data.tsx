@@ -1,25 +1,32 @@
-import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { type } from "os";
 
-export default function data() {
-	// eslint-disable-next-line react-hooks/rules-of-hooks
-	const [data, setData] = useState([]);
 
-	// eslint-disable-next-line react-hooks/rules-of-hooks
-	useEffect(() => {
-		// Fetch data from an API
-		fetch('https://www.goodreturns.in/src/gold_silver_rates.php?cmd=gold_rates_4_graph&__token=X435rt78&city=jaipur&callback=jQuery19103302749524144587_1679614933953&_=1679614933954')
-			.then((response) => response.json())
-			.then((data) => {
-				// Update state with the fetched data
-				setData(data[0]);
-			});
-	}, []); // Only run once on component mount
+// interface dataType {
+// 	id: '63f82f396c676e742c2a3f79';
+// 	city: 'jaipur';
+// 	displayName: 'Jaipur';
+// 	state: 'rajasthan';
+// 	date: '2023-02-24';
+// 	price22Cr: '51950';
+// 	price24Cr: '56610';
+// 	change22Cr: '-200.00';
+// 	change24Cr: '-270.00';
+// }
 
-  console.log(data[0]);
-  
-	return (
-		<div>
-			hello
-		</div>
-	);
+export default function data({ data }:any) {
+	console.log(data[data.length-1 ]);
+
+	return <div>hello</div>;
+}
+
+export async function getStaticProps() {
+	const res = await axios.get('https://www.livemint.com/api/cms/goldsilver/gethistoricaldata/gold/jaipur/30');
+	const data = res.data;
+
+	return {
+		props: {
+			data,
+		},
+	};
 }
