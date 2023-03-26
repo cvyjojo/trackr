@@ -7,7 +7,7 @@ import Sidebar from "./Sidebar";
 export default function Main() {
 	return (
 		<div className='relative grotesk max-w-8xl mx-auto bg-violet-50 overflow-hidden max-h-screen'>
-			<header className='fixed right-0 top-0 left-60 bg-violet-50 py-3 px-4 h-16'>
+			{/* <header className='fixed right-0 top-0 left-60 bg-violet-50 py-3 px-4 h-16'>
 				<div className='max-w-4xl mx-auto'>
 					<div className='flex items-center justify-between'>
 						<div>
@@ -17,7 +17,7 @@ export default function Main() {
 							>
 								<span className='inline-flex items-center justify-center w-6 h-6 text-gray-600 text-xs rounded bg-white transition mr-2'>
 									<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='currentColor' className='bi bi-chevron-left' viewBox='0 0 16 16'>
-										<path fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z' />
+										<path fillRule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z' />
 									</svg>
 								</span>
 								<span className='text-sm'>Archive</span>
@@ -32,14 +32,14 @@ export default function Main() {
 								<span className='text-sm'>This week</span>
 								<span className='inline-flex items-center justify-center w-6 h-6 text-gray-600 text-xs rounded bg-white transition ml-2'>
 									<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='currentColor' className='bi bi-chevron-right' viewBox='0 0 16 16'>
-										<path fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z' />
+										<path fillRule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z' />
 									</svg>
 								</span>
 							</button>
 						</div>
 					</div>
 				</div>
-			</header>
+			</header> */}
 
 			<Sidebar />
 
